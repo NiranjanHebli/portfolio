@@ -1,0 +1,40 @@
+{
+  "name": "agentic-badge-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.12",
+    "@react-three/rapier": "^1.5.0",
+    "framer-motion": "^11.15.0",
+    "gsap": "^3.15.0",
+    "leva": "^0.10.0",
+    "lucide-react": "^0.469.0",
+    "maath": "^0.10.8",
+    "next": "14.2.23",
+    "postprocessing": "^6.39.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.170.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/three": "^0.170.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  },
+  "overrides": {
+    "browserslist": "4.24.2"
+  }
+}

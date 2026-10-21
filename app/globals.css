@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #06080c;
+  color: #f8fafc;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ============================================================================
+   HIGH-CONTRAST MODE OVERRIDES (WCAG AAA Pure Black / White / Vivid Cyan)
+   ============================================================================ */
+body[data-theme='high-contrast'],
+body[data-theme='high-contrast'] .app-shell-root {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body[data-theme='high-contrast'] .bg-slate-950,
+body[data-theme='high-contrast'] .bg-slate-950\/70,
+body[data-theme='high-contrast'] .bg-slate-950\/90,
+body[data-theme='high-contrast'] .bg-slate-950\/95,
+body[data-theme='high-contrast'] .bg-slate-900,
+body[data-theme='high-contrast'] .bg-slate-900\/75,
+body[data-theme='high-contrast'] .bg-slate-900\/80,
+body[data-theme='high-contrast'] .bg-slate-900\/90,
+body[data-theme='high-contrast'] .bg-slate-900\/95,
+body[data-theme='high-contrast'] .bg-terminal-panel,
+body[data-theme='high-contrast'] .bg-terminal-panel\/90 {
+  background-color: #000000 !important;
+}
+
+body[data-theme='high-contrast'] .text-slate-200,
+body[data-theme='high-contrast'] .text-slate-300,
+body[data-theme='high-contrast'] .text-slate-400,
+body[data-theme='high-contrast'] .text-slate-500 {
+  color: #ffffff !important;
+}
+
+body[data-theme='high-contrast'] .text-sky-300,
+body[data-theme='high-contrast'] .text-sky-400,
+body[data-theme='high-contrast'] .text-cyan-300,
+body[data-theme='high-contrast'] .text-cyan-400 {
+  color: #00ffff !important;
+}
+
+body[data-theme='high-contrast'] .text-emerald-300,
+body[data-theme='high-contrast'] .text-emerald-400 {
+  color: #00ff88 !important;
+}
+
+body[data-theme='high-contrast'] .border-slate-800,
+body[data-theme='high-contrast'] .border-slate-800\/80,
+body[data-theme='high-contrast'] .border-slate-800\/90,
+body[data-theme='high-contrast'] .border-slate-700,
+body[data-theme='high-contrast'] .border-slate-700\/80 {
+  border-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+body[data-theme='high-contrast'] a:focus-visible,
+body[data-theme='high-contrast'] button:focus-visible {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 2px !important;
+}
+
+/* Modern Web Guidance (`accessibility`): Hides content visually but keeps it in the accessibility tree. */
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.skip-link:focus,
+.skip-link:focus-within {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 9999;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #22d3ee;
+  color: #020617;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  outline: 2px solid #ffffff;
+}
+
+/* Modern Web Guidance (`drag`): Include -webkit-user-select: none before user-select: none */
+.drag-handle {
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.drag-handle.dragging {
+  cursor: grabbing;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06080c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee;
+}
+
+/* ============================================================================
+   STITCH ACADEMIC PATHWAY SUITE STYLES
+   ============================================================================ */
+.bg-grid-pattern {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.radial-vignette {
+  background: radial-gradient(circle at 50% 15%, rgba(14, 28, 54, 0.75) 0%, rgba(7, 12, 20, 0.95) 70%, #05070c 100%);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(14, 22, 38, 0.75) 0%, rgba(9, 14, 23, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.28), rgba(255, 255, 255, 0.04), rgba(16, 185, 129, 0.18));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 35px -5px rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.shadow-node-cyan {
+  box-shadow: 0 0 20px 4px rgba(56, 189, 248, 0.65), inset 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.shadow-node-emerald {
+  box-shadow: 0 0 20px 4px rgba(16, 185, 129, 0.75), inset 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================================================
+   PRINT STYLES: Pure white, clean black typography, no webpage chrome
+   ============================================================================ */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 14mm 10mm 14mm;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Universal print resets: completely hide sidebars, headers, navigation, buttons */
+  aside,
+  nav,
+  button,
+  .no-print,
+  .print-hidden,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Let main and wrapper occupy the full page cleanly */
+  main,
+  #content,
+  .app-shell-root {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    border: none !important;
+    overflow: visible !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+

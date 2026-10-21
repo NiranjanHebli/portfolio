@@ -1,0 +1,71 @@
+{"systems":[
+{"id":"core","name":"CORE STAR","type":"star","tint":"#ffb347","start":0,"end":13,"center":[0,0,0],"radius":0,"palettes":[["#fff2b0","#ff8a00","#ffb347"]],
+ "skills":[
+   {"name":"Data Structures and Algorithms","size":5,"prof":0.95,"pal":["#fff6cc","#ff7b00","#ffbe3d"],"desc":"Algorithmic problem solving, graph & tree algorithms, and dynamic programming - the foundation everything orbits."}
+ ]},
+{"id":"lang","name":"LANGUAGES","type":"rocky","tint":"#ff9a5a","start":13,"end":27,"center":[42,3,-18],"radius":14,"phase":2.1,"arc":2.7,"yvar":2.4,"pass":1.9,
+ "palettes":[["#091e42","#2684ff","#79e2f2"]],
+ "skills":[
+   {"name":"C","size":1.7,"prof":0.9,"pal":["#081c3a","#1d7AFC","#7ce8ff"],"desc":"Low-level systems programming, memory management, and high-performance execution."},
+   {"name":"C++","size":1.9,"prof":0.85,"pal":["#360816","#e63946","#ffb703"],"ring":true,"desc":"Object-oriented systems engineering, STL containers, and competitive programming."},
+   {"name":"Java","size":2,"prof":0.8,"pal":["#381406","#f77f00","#fcbf49"],"desc":"Enterprise object-oriented software architecture and concurrent application design."},
+   {"name":"Golang","size":1.8,"prof":0.75,"pal":["#052938","#00b4d8","#90f1ef"],"desc":"Concurrent microservices, goroutines, and high-throughput backend systems."},
+   {"name":"TypeScript","size":2,"prof":0.9,"pal":["#151348","#4361ee","#4cc9f0"],"ring":true,"desc":"End-to-end type-safe full-stack engineering across modern web and API architectures."},
+   {"name":"Python","size":2.2,"prof":0.95,"pal":["#0a2e22","#10b981","#ffd166"],"desc":"Primary language for Agentic AI, LangGraph, PyTorch, FastAPI, and production ML pipelines."}
+ ]},
+{"id":"ml","name":"ML CORE","type":"gas","tint":"#8a4dff","start":29,"end":39,"center":[90,-4,-46],"radius":16,"phase":2.2,"arc":2.5,"yvar":3,"pass":2.4,"camDist":11,
+ "palettes":[["#2a0e4d","#b04dff","#ff6bd6"]],
+ "skills":[
+   {"name":"Machine Learning","size":3.4,"prof":0.9,"pal":["#1f083d","#9d4edd","#ff9e00"],"desc":"Classical and deep learning architectures, feature engineering, and model optimization."},
+   {"name":"PyTorch","size":3,"prof":0.85,"pal":["#3d0814","#ff4d6d","#ffbe0b"],"desc":"Deep neural network training, custom autograd modules, and GPU-accelerated inference."},
+   {"name":"LLM Finetuning","size":3.8,"prof":0.85,"pal":["#0a185c","#7209b7","#4cc9f0"],"desc":"Domain adaptation, parameter-efficient fine-tuning, and strict grounding prompts (-70% hallucinations)."},
+   {"name":"RAG","size":3.2,"prof":0.9,"pal":["#06332e","#06d6a0","#ffd166"],"desc":"Hybrid lexical (BM25) + vector (ChromaDB) retrieval validated with Ragas evaluation pipelines."}
+ ]},
+{"id":"agentic","name":"AGENTIC NEBULA","type":"orb","tint":"#19d3ff","start":41,"end":61,"center":[138,8,-78],"radius":16,"phase":1.95,"arc":3.0,"yvar":4.2,"pass":1.9,"camDist":5.5,"drift":true,
+ "palettes":[["#052b4a","#19d3ff","#7af0ff"]],
+ "links":[["Agentic AI","Multi-Agent System"],["Multi-Agent System","LangChain"],["LangChain","LangGraph"],["LangGraph","LangSmith"],["CrewAI","AutoGen"],["CrewAI","LangFuse"],["MCP","Agentic AI"],["LangSmith","LangFuse"]],
+ "skills":[
+   {"name":"Agentic AI","size":1.6,"prof":0.95,"pal":["#062c4d","#00d2ff","#80ffdb"],"desc":"Autonomous reasoning loops, deterministic tool-calling, and Human-in-the-Loop (HITL) workflows."},
+   {"name":"Multi-Agent System","size":1.5,"prof":0.9,"pal":["#260845","#b5179e","#ff70a6"],"desc":"Collaborative multi-agent orchestration processing 60+ documents/min at 5x manual speed."},
+   {"name":"LangChain","size":1.4,"prof":0.9,"pal":["#073628","#06d6a0","#ffbe0b"],"desc":"Composable LLM chains, structured output parsing, and dynamic retrieval pipelines."},
+   {"name":"LangGraph","size":1.5,"prof":0.92,"pal":["#361006","#ff6b35","#ffd166"],"desc":"Stateful multi-step agent graphs with persistent conversational memory on Azure Cloud."},
+   {"name":"CrewAI","size":1.4,"prof":0.9,"pal":["#380617","#ff2a85","#ff9ebb"],"desc":"Role-based autonomous agent crews synthesising operational intelligence."},
+   {"name":"AutoGen","size":1.3,"prof":0.8,"pal":["#0b1c48","#4895ef","#a9def9"],"desc":"Conversable multi-agent frameworks for complex task decomposition and execution."},
+   {"name":"MCP","size":1.5,"prof":0.9,"pal":["#332204","#f59e0b","#fef08a"],"desc":"Model Context Protocol (SSE & Stdio) servers exposing real-time database, search, and scraping tools."},
+   {"name":"LangSmith","size":1.4,"prof":0.9,"pal":["#06332e","#2ec4b6","#cbf3f0"],"desc":"Production LLM observability, agent trajectory monitoring, trace analysis, and latency optimization."},
+   {"name":"LangFuse","size":1.4,"prof":0.9,"pal":["#240846","#8338ec","#ff758f"],"desc":"Open-source LLM observability pipelines integrated with OpenTelemetry and HITL verification gates."}
+ ]},
+{"id":"vision","name":"VISION BELT","type":"vision","tint":"#1fe08a","start":63,"end":74,"center":[184,0,-110],"radius":15,"phase":2.15,"arc":2.6,"yvar":3,"pass":1.9,"camDist":6.5,
+ "palettes":[["#063d2a","#1fe08a","#7dffc2"]],
+ "skills":[
+   {"name":"OpenCV","size":2,"prof":0.85,"pal":["#063b28","#10b981","#6ee7b7"],"desc":"Real-time image processing, geometric transformations, and computer vision pipelines."},
+   {"name":"YOLO","size":2.2,"prof":0.85,"pal":["#3b1c06","#f59e0b","#fde047"],"ring":true,"desc":"High-speed real-time object detection and bounding-box localization."},
+   {"name":"CNNs","size":1.9,"prof":0.85,"pal":["#1f0a42","#8b5cf6","#ddd6fe"],"desc":"Convolutional neural network architectures for visual feature extraction and classification."},
+   {"name":"Image Embeddings","size":2,"prof":0.8,"pal":["#082f49","#06b6d4","#67e8f9"],"desc":"Dense visual representation learning and multimodal vector similarity search."},
+   {"name":"Vision-Language Models","size":2.2,"prof":0.8,"pal":["#3b0726","#ec4899","#fbcfe8"],"desc":"Multimodal VLM pipelines and OCR diagram comprehension for unstructured PDFs."}
+ ]},
+{"id":"web","name":"WEB & DATA","type":"ice","tint":"#3d7bff","start":74,"end":82,"center":[220,-6,-138],"radius":12,"phase":2.2,"arc":2.4,"yvar":2.2,"pass":1.9,
+ "palettes":[["#0b2a5c","#3d7bff","#9fd0ff"]],
+ "skills":[
+   {"name":"NestJS","size":2,"prof":0.85,"pal":["#380614","#e11d48","#fda4af"],"desc":"Modular, scalable TypeScript backend architecture and enterprise REST APIs."},
+   {"name":"ReactJS","size":2.2,"prof":0.9,"pal":["#062846","#00b4d8","#caf0f8"],"ring":true,"desc":"Interactive component architectures, Next.js applications, and 3D WebGL interfaces."},
+   {"name":"FastAPI","size":2,"prof":0.9,"pal":["#042f2e","#0d9488","#99f6e4"],"desc":"High-performance async Python APIs powering voice-first and agentic AI backends."},
+   {"name":"MySQL","size":1.9,"prof":0.85,"pal":["#362005","#d97706","#fde68a"],"desc":"Relational schema design, MCP database query tools, and structured operational storage."}
+ ]},
+{"id":"devops","name":"DEVOPS & LINUX","type":"devops","tint":"#ff6a2a","start":82,"end":93,"center":[256,4,-166],"radius":14,"phase":2.15,"arc":2.6,"yvar":3,"pass":1.9,
+ "palettes":[["#3a0c06","#ff6a2a","#ffb38a"]],
+ "skills":[
+   {"name":"Linux and Shell","size":2.2,"prof":0.9,"pal":["#361505","#f97316","#fed7aa"],"desc":"POSIX shell automation, system administration, and process management."},
+   {"name":"RHEL","size":2,"prof":0.8,"pal":["#3b070b","#dc2626","#fca5a5"],"desc":"Red Hat Enterprise Linux environments, security hardening, and enterprise deployment."},
+   {"name":"Git and GitHub","size":2.1,"prof":0.92,"pal":["#261038","#a855f7","#f5d0fe"],"desc":"Version control workflows, branching strategies, and collaborative code review."},
+   {"name":"Docker","size":2.3,"prof":0.88,"pal":["#062446","#0284c7","#7dd3fc"],"ring":true,"desc":"Containerized AI microservices and reproducible multi-stage production builds."},
+   {"name":"Jenkins","size":2,"prof":0.78,"pal":["#332406","#eab308","#fef08a"],"desc":"Automated CI/CD pipelines, build orchestration, and continuous deployment."}
+ ]},
+{"id":"cloud","name":"CLOUD","type":"cloud","tint":"#bfe6ff","start":93,"end":100,"center":[292,12,-194],"radius":12,"phase":2.25,"arc":2.1,"climb":4,"pass":1.9,"camDist":6.5,
+ "palettes":[["#2a6fb0","#ffffff","#bfe6ff"]],
+ "skills":[
+   {"name":"AWS","size":2.8,"prof":0.82,"pal":["#3b1d06","#ff9900","#ffe8b3"],"desc":"Cloud compute, storage, and scalable AI service deployment on Amazon Web Services."},
+   {"name":"Google Cloud","size":2.8,"prof":0.8,"pal":["#0b2b5c","#34a853","#fbbc05"],"ring":true,"desc":"GCP infrastructure, developer training workshops, and managed cloud services."},
+   {"name":"Azure","size":2.8,"prof":0.88,"pal":["#062654","#0089d6","#7ce8ff"],"desc":"Production deployment of stateful LangGraph conversational agents on Microsoft Azure."}
+ ]}
+]}

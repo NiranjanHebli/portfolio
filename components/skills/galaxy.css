@@ -1,0 +1,43 @@
+:root{--bg:#05060f;--n:#66f0ff;--g:#3dff9a;--mono:'JetBrains Mono',ui-monospace,monospace;--disp:'Space Grotesk',system-ui,sans-serif}
+.sg{position:relative;width:100%;height:100vh;flex:1;overflow:hidden;background:var(--bg);color:#cfe;font-family:var(--mono)}
+.sg canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sg .hud{position:absolute;inset:0;pointer-events:none;font-size:13px;letter-spacing:.1em}
+.sg .boot{position:absolute;left:24px;top:24px;color:var(--n);font-size:14px;font-weight:700}
+.sg .title{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);margin:0;font:700 clamp(2.4rem,9vw,8rem)/1 var(--disp);letter-spacing:.06em;color:#fff;text-shadow:0 0 28px var(--n);white-space:nowrap;clip-path:inset(0 100% 0 0);transition:opacity .3s}
+.sg .hint{position:absolute;bottom:10%;width:100%;text-align:center;opacity:0;color:var(--n);font-size:14px;font-weight:600;text-shadow:0 2px 10px #000;margin:0;transition:opacity .3s}
+.sg .sys{position:absolute;left:24px;bottom:28px;color:var(--n);font-size:13px;font-weight:700;text-shadow:0 2px 8px #000}
+.sg .ctrls{position:absolute;right:24px;bottom:26px;display:flex;gap:10px;pointer-events:auto;z-index:4}
+.sg .act,.sg .back{background:#05060fe0;border:1px solid #66f0ff66;color:var(--n);font:inherit;font-size:12px;font-weight:700;letter-spacing:.1em;padding:6px 14px;border-radius:6px;cursor:pointer;backdrop-filter:blur(6px);transition:background .2s,border-color .2s,transform .15s}
+.sg .back{border-color:var(--g);color:var(--g);background:#041a12e6}
+.sg .act:hover,.sg .act:focus-visible{background:#66f0ff26;border-color:var(--n);outline:none;transform:translateY(-1px)}
+.sg .back:hover,.sg .back:focus-visible{background:#3dff9a26;border-color:var(--g);outline:none;transform:translateY(-1px)}
+.sg .bar{position:absolute;left:24px;right:24px;bottom:14px;height:3px;background:#ffffff22;border-radius:2px}
+.sg .bar i{display:block;height:100%;background:var(--n);transform-origin:0 0;transform:scaleX(0)}
+.sg .lbl-pos{position:absolute;left:0;top:0;visibility:hidden;will-change:transform}
+.sg .lbl{opacity:0;width:max-content;min-width:240px;max-width:min(380px,86vw);padding:12px 18px;background:rgba(5,6,15,.88);border:1px solid rgba(102,240,255,.45);border-left:4px solid var(--n);border-radius:8px;box-shadow:0 10px 32px rgba(0,0,0,.8),0 0 20px rgba(102,240,255,.15);will-change:transform,opacity}
+.sg .lbl b{display:block;font:700 clamp(24px,2.5vw,32px)/1.15 var(--disp);color:#fff;letter-spacing:.02em;text-shadow:0 2px 12px #000,0 0 18px rgba(102,240,255,.4)}
+.sg .lbl span{display:block;margin-top:5px;color:var(--n);font-size:13px;font-weight:700;letter-spacing:.12em}
+.sg .lbl .ln{display:block;width:48px;height:2px;background:var(--n);transform-origin:0 0;margin-bottom:8px;box-shadow:0 0 8px var(--n)}
+.sg .pr{display:block;height:4px;background:#ffffff28;margin-top:10px;border-radius:2px;text-decoration:none;overflow:hidden}.sg .pr em{display:block;height:100%;background:linear-gradient(90deg,var(--n),var(--g))}
+.sg .br{position:absolute;left:0;top:0;opacity:0;transform-origin:center center;will-change:transform,opacity;--l:linear-gradient(var(--g),var(--g));background:var(--l) left top/18px 2px,var(--l) left top/2px 18px,var(--l) right top/18px 2px,var(--l) right top/2px 18px,var(--l) left bottom/18px 2px,var(--l) left bottom/2px 18px,var(--l) right bottom/18px 2px,var(--l) right bottom/2px 18px;background-repeat:no-repeat}
+.sg .br span{position:absolute;left:0;top:-24px;font-size:12px;font-weight:700;color:var(--g);background:rgba(5,6,15,.82);padding:2px 6px;border-radius:4px;white-space:nowrap}
+.sg .panel{position:absolute;right:24px;top:24px;width:180px;opacity:0;border:1px solid #66f0ff55;padding:10px;border-radius:6px;background:#05060fd9;color:var(--n);font-size:11px;font-weight:700}
+.sg .panel path,.sg .panel line{stroke:var(--n);fill:none;stroke-width:1.5}.sg .panel circle{fill:var(--n)}
+.sg .tip{position:absolute;left:0;top:0;padding:6px 12px;background:#05060ff0;border:1px solid #66f0ff77;border-radius:6px;color:#fff;font-size:14px;font-weight:700;opacity:0;white-space:nowrap;box-shadow:0 6px 20px rgba(0,0,0,.7);will-change:transform,opacity}
+.sg .card{position:absolute;left:24px;bottom:68px;width:min(380px,calc(100% - 48px));padding:20px;border:1px solid #66f0ff66;border-left:4px solid var(--n);border-radius:10px;background:#05060ff2;box-shadow:0 14px 40px rgba(0,0,0,.85);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s;transform:translateY(16px);z-index:5}
+.sg .card.on{opacity:1;visibility:visible;transform:none}
+.sg .card h3{margin:6px 0 8px;font:700 28px/1.15 var(--disp);color:#fff}
+.sg .card p{margin:8px 0 12px;font-size:14px;line-height:1.5;color:#d8f3ff;letter-spacing:.02em}
+.sg .card small{color:var(--n);font-size:12px;font-weight:700;letter-spacing:.12em}
+.sg .card .x{position:absolute;right:10px;top:8px;width:32px;height:32px;border-radius:6px;background:#ffffff12;border:1px solid #ffffff24;color:#fff;font-size:20px;line-height:1;cursor:pointer;transition:background .2s,border-color .2s}
+.sg .card .x:hover{background:#66f0ff26;border-color:var(--n)}
+.sg .card .back-btn{margin-top:14px;width:100%;padding:9px 14px;border-radius:6px;border:1px solid #66f0ff66;background:#66f0ff18;color:var(--n);font:700 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s,border-color .2s}
+.sg .card .back-btn:hover,.sg .card .back-btn:focus-visible{background:#66f0ff33;border-color:var(--n);outline:none}
+.sg .list{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sg.nogl,.sg.reduced{height:auto;min-height:100vh}
+.sg.nogl .list{position:relative;width:auto;height:auto;clip:auto;overflow:visible;padding:24px}
+.sg.reduced .list{position:absolute;right:16px;top:16px;width:260px;max-height:70%;overflow:auto;clip:auto;background:#05060fcc;padding:12px;z-index:2}
+.sg .list button{background:none;border:0;color:#cfe;font:inherit;cursor:pointer;padding:2px 0;text-align:left}.sg .list button:focus-visible,.sg .card .x:focus-visible{outline:2px solid var(--n)}
+.sg .list h3{color:var(--n);margin:10px 0 2px;font-size:12px}.sg .list ul{margin:0;padding:0;list-style:none}
+.sg .dbg{position:absolute;right:16px;bottom:56px;background:#000b;padding:8px;font-size:11px;z-index:5}.sg .dbg input{width:220px;display:block}
+@media(max-width:768px){.sg{height:calc(100vh - 4rem)}.sg .lbl{min-width:190px;padding:10px 14px}.sg .lbl b{font-size:22px}.sg .panel{display:none}}
